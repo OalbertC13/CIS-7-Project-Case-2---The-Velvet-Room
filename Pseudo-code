@@ -1,0 +1,79 @@
+// Pseudocode for Case 2: UCR Medical Center Volunteers
+// Alberto Cervantes
+// CIS 7 - Discrete Structures
+// Dr. Nguyen
+// https://www.doctorswithoutborders.org/what-we-do/countries#alphabetical-listing
+
+List global variables / initialize some global variables for arrays [array sizes, languages, and specialties]
+list possible participant specialties ( minimum 5 ) in arrays.
+	[ Pediatrics, General Surgery, Neurology, Hematology, Orthopedic Surgery, Dietetics ]
+list languages of participants ( minimum 7 ) as variables.
+	[ Hindi, English, Spanish, Arabic, Afrikaans, Italian, Portuguese, French ]
+sort functions for languages and specialties
+display functions for sorted languages and specialties.
+
+Begin main
+	variables for the user's name, specialty, and language.
+	
+	Simple splash screen/ title.
+	Welcome user to Doctors without Borders program with short cout statement
+
+	ask user for information regarding name, language and specialty in that order
+	
+	// have their name recorded for later use
+	ask user for their name.
+		store name in variables.
+	
+	// have ONE language the user is fluent in to minimize how much needs to be processed
+	ask user for a language they are fluent in ( list preferred languages 
+		[see list of languages listed in code above])
+		-store language in variable.
+	
+	// have specialty of user to determine where they will go 
+	ask user for medical specialty ( list specialties )
+		-store specialty of user in variable.
+	
+	// after checking for the language and specialty, the user will be given a list
+	// of possible deployment countries 
+	case switch checking first for fluent language, followed by specialty.
+	
+	// Will list all possible countries before switch statement of specialty for each language in comments.
+	Switch: (language check)
+		case 1: 
+			Switch: (specialty check)
+				case switches for specialties (6)	
+				show possible countries user can go to
+		case 2:
+			Switch: (specialty check)
+				case switches for specialties (6)
+				show possible countries user can go to
+		case 3:
+			Switch: (specialty check)
+				case switches for specialties (6)
+				show possible countries user can go to
+		case 4:
+			Switch: (specialty check)
+				case switches for specialties (6)
+				show possible countries user can go to
+		case 5:
+			Switch: (specialty check)
+				case switches for specialties (6)
+				show possible countries user can go to
+		case 6:
+			Switch: (specialty check)
+				case switches for specialties (6)
+				show possible countries user can go to
+		case 7:
+			Switch: (specialty check)
+				case switches for specialties (6)
+				show possible countries user can go to
+		case 8:
+			Switch: (specialty check)
+				case switches for specialties (6)
+				show possible countries user can go to
+	ending cout statement
+End main
+
+sort language function
+sort specialty function
+display functions for language and specialties respectively.
