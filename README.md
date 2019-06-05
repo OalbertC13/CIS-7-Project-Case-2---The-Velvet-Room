@@ -6,3 +6,5 @@ Doctors without Borders program for possible assignments of participants across 
 6/5/2019 [12:10 am]- Flowchart updated to reflect changes made to program.
 
 6/5/2019 [12:17 am]- Code added to Github (not finished build but close).
+
+6/5/2019 [12:23 am]- Pseudo-code added.
