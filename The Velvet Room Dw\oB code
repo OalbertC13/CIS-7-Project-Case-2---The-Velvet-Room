@@ -1,0 +1,426 @@
+/*
+ * This program will determine a list of countries a user may go to with the 
+ * Doctors without Borders Program.
+ *
+ * Pseudocode for Case 2: UCR Medical Center Volunteers
+ * Alberto Cervantes
+ * CIS 7 - Discrete Structures
+ * Dr. Nguyen
+ * https://www.doctorswithoutborders.org/what-we-do/countries#alphabetical-listing
+*/
+#include <iostream>
+#include <string>
+#include <vector>
+#include <iomanip>
+#include <stdlib.h>
+#include <cctype>
+#include <limits>
+#include <unistd.h>
+
+using namespace std;
+
+const int lan = 8;
+const int medic = 6;
+
+void sortLan(string [], int); // selection sort function for Languages
+void sortMed(string [], int); // selection sort funciton for Specialties
+
+void showLan(const string[], int);  // function for showing the sorted array
+void showMed(const string[], int);  // function for showing the sorted array
+
+string language [lan] = {"English", "Spanish", "French", "Italian", "Portuguese", "Arabic", "Hindi", "Afrikaans"};
+
+string specialty [medic] = {"Pediatrics", "General Surgery", "Neurology", "Hematology", "Orthopedic Surgery", "Dietetics"};
+
+int main() 
+{
+  string fName, lName;  // variables for holding the user's first and last names.
+  int lang, spec; // variables to hold the user's preferred language and medical specialty.
+
+  cout << "---------------------------------------------------------------------"<< endl;
+  cout << "|\t\t Welcome to the Doctors without Borders Program.\t\t\t|\n";
+  cout << "---------------------------------------------------------------------"<< endl;
+  usleep(500000); // small delay before full program starts.
+  cout << endl;
+  cout << "May we please have your first name and last name?" << endl ;
+  cin >> fName >> lName;
+  usleep(1000000);
+
+  sortLan(language, lan); // calls sortLan function
+  cout << "\nThank you " << fName << " " << lName << 
+    ".\nNow, please tell us which of the following languages "
+    "\nyou are most fluent with:\n" << endl;
+  showLan(language, lan); // displays languages for the user to make their choice.
+  cin >> lang;
+  while (!cin ||lang <= 0 || lang >= 9) // checks for invalid inputs from the user
+  {
+    cout << "That option does not exist. Try again \n";
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin >> lang;
+  }
+  usleep(1000000);
+
+  sortMed(specialty, medic);  // calls sortMed function
+  cout << "\nThank you, now may you tell us which of the following practices \n"
+    "you are most familiar with:\n" << endl;
+  showMed(specialty, medic);  // displays specialties for the user to make their choice.
+  cin >> spec;
+  while (!cin || spec <= 0 || spec >= 7) // checks for invalid inputs from the user
+  {
+    cout << "That option does not exist. Try again \n";
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin >> spec;
+  }
+  usleep(1000000);
+
+  cout << "\n\nThank you, you will now be given a list of countries\n"
+    "you may go to with our program.\n\n";
+  usleep(1000000);
+
+  // Utilizes the user's previous inputs to determine what countries the user may go to with
+  // the Doctors without Borders Program.
+  switch (lang)
+  {
+    case 1:
+      cout << "As your most fluent language is Afrikaans, "
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+        // Australila, Belgium, Botswana, Lesotho, Malawi, New Zealand, US, Zimbabwe
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Afrikaans speaking countries here with Dietetics need.";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Afrikaans speaking countries here with General Surgery need.";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Afrikaans speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Afrikaans speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Afrikaans speaking countries here with Orthopedic Surgery need.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Afrikaans speaking countries here with Pediatrics need.";
+          break;
+      }
+      break;
+    case 2:
+      cout << "As your most fluent language is Arabic, "
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+     /*
+      Afghanistan, Argentina, Canada Chad, Egypt, France, Italy, Iraq, Jordan, Lebanon, Libya, Palestine,
+      Pakistan, Philippines, Sudan, Syria, US, Yemen
+     */
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "Syria, Sudan";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Chad, Egypt, Iraq";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Arabic speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Arabic speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Arabic speaking countries here with Orthopedic Surgery need.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Yemen";
+          break;
+      }
+      break;
+    case 3:
+      cout << "As your most fluent language is English, "
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+        /*
+        Antigua, Belgium, Cameroon, Canada, India, Kenya, Liberia, Malawi, Nigeria, Pakistan,
+        Paupa New Guinea, Philippines, Rwanda, Sierra Leone, South Africa, South Sudan, Sudan,
+        Tanzania, Uganda, United States, Zambia, Zimbabwe
+        */
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "US, ";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Kenya, Nigeria, New Zealand";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert English speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert English speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert English speaking countries here with Orthopedic Surgery need.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Liberia, South Africa";
+          break;
+      }
+      break;
+    case 4:
+      cout << "As your most fluent language is French, "
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+        /*
+        Belgium, Cameroon, Canada, Chad, Côte d'Ivoire, Democratic Republic of the Congo, France, Guinea,
+        Haiti, India, Italy, Jordan, Lebanon, Mali, Mexico, Niger, Rwanda, Switzerland, US
+        */
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "Cameroon, Niger, Haiti";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Mali, Guinea, France, Côte d'Ivoire";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert French speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert French speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert French speaking countries here with Orthopedic Surgery need.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Canada, Switzerland";
+          break;
+      }
+      break;
+    case 5:
+      cout << "As your most fluent language is Hindi, "
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+        /* 
+          Bangladesh, India, Pakistan, South Africa, Yemen, Australia, New Zealand, Tanzania, Uganda, Canada,
+          US
+        */
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Hindi speaking countries here with Dietetics need.";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Hindi speaking countries here with General Surgery need.";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Hindi speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Hindi speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Hindi speaking countries here with Orthopedic Surgery need.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Hindi speaking countries here with Pediatrics need.";
+          break;
+      }
+      break;
+    case 6:
+      cout << "As your most fluent language is Italian, "
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      /*
+      Italy, Switzerland, Belgium, France, Greece, Libya, Argentina, Canada, Mexico, US, Australia
+      */
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Italian speaking countries here with Dietetics need.";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Italian speaking countries here with General Surgery need.";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Italian speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Italian speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Italian speaking countries here with Orthopedic Surgery need.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Italian speaking countries here with Pediatrics need.";
+          break;
+      }
+      break;
+    case 7:
+      cout << "As your most fluent language is Portuguese, "
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      /*
+      Portugal, France, Switzerland, South Africa, India, US, Canada, 
+      */
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Portuguese speaking countries here with Dietetics need.";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Portuguese speaking countries here with General Surgery need.";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Portuguese speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Portuguese speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Portuguese speaking countries here with Orthopedic Surgery need.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Portuguese speaking countries here with Pediatrics need.";
+          break;
+      }
+      break;
+    case 8:
+      cout << "As your most fluent language is Spanish,"
+        "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      /*
+      France, Italy, Australia, New Zealand, Philippines, Mexico, US, El Salvador, US, Argentina
+      */
+      switch (spec)
+      {
+        case 1: // Dietetics
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Spanish speaking countries here with Dietetics need.";
+          break;
+        case 2: // General Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Argentina.";
+          break;
+        case 3: // Hematology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Spanish speaking countries here with Hematology need.";
+          break;
+        case 4: // Neurology
+          cout << "Your options are as follows: " << endl;
+          cout << "Insert Spanish speaking countries here with Neurology need.";
+          break;
+        case 5: // Orthopedic Surgery
+          cout << "Your options are as follows: " << endl;
+          cout << "Argentina.";
+          break;
+        case 6: // Pediatrics
+          cout << "Your options are as follows: " << endl;
+          cout << "Cuba\nArgentina\nChile\nVenezuela\nNicaragua";
+          break;
+
+      }
+      break;
+  }
+  cout << "Thank you for participating in the Doctors without Borders Program." << endl;
+}
+// sorting the language array
+void sortLan(string language[], int lan)
+{
+  int start, maxIndex;
+  string maxVal;
+  for (start = 0; start < (lan - 1); start++)
+  {
+    maxIndex = start;
+    maxVal = language[start];
+    for (int index = start + 1; index < lan; index++)
+    {
+      if (language[index] < maxVal)
+      {
+        maxVal = language[index];
+        maxIndex = index;
+      }
+    }
+    language[maxIndex] = language[start];
+    language[start] = maxVal;
+  }
+}
+// sorting the specialty array
+void sortMed(string specialty[], int medic)
+{
+  int start, maxIndex;
+  string maxVal;
+  for (start = 0; start < (medic - 1); start++)
+  {
+    maxIndex = start;
+    maxVal = specialty[start];
+    for (int index = start + 1; index < medic; index++)
+    {
+      if (specialty[index] < maxVal)
+      {
+        maxVal = specialty[index];
+        maxIndex = index;
+      }
+    }
+    specialty[maxIndex] = specialty[start];
+    specialty[start] = maxVal;
+  }
+}
+// function to show the selection sort for languages
+void showLan(const string language[], int lan)
+{
+  cout << "---------------------------------------------------------------------"<< endl;
+  for (int count = 0; count < lan; count++)
+  {
+    cout << (count + 1) << ". " << language[count] << endl;
+  }
+  cout << "---------------------------------------------------------------------"<< endl;
+}
+// function to show the selection sort for specialties
+void showMed(const string specialty[], int medic)
+{
+  cout << "---------------------------------------------------------------------"<< endl;
+  for (int count = 0; count < medic; count++)
+  {
+    cout << (count + 1) << ". " << specialty[count] << endl;
+  }
+  cout << "---------------------------------------------------------------------"<< endl;
+}
