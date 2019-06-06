@@ -10,3 +10,5 @@ Doctors without Borders program for possible assignments of participants across 
 6/5/2019 [12:23 am]- Pseudo-code added.
 
 6/5/2019 [2:41 pm]- Project documentation was added.
+
+6/5/2019 [7:52 pm]- Code was finished and updated on Github.
