@@ -10,7 +10,6 @@
 */
 #include <iostream>
 #include <string>
-#include <vector>
 #include <iomanip>
 #include <stdlib.h>
 #include <cctype>
@@ -39,7 +38,7 @@ int main()
   int lang, spec; // variables to hold the user's preferred language and medical specialty.
 
   cout << "---------------------------------------------------------------------"<< endl;
-  cout << "|\t\t Welcome to the Doctors without Borders Program.\t\t\t|\n";
+  cout << "|\t Welcome to the Doctors without Borders Program.\t\t\t\t|\n";
   cout << "---------------------------------------------------------------------"<< endl;
   usleep(500000); // small delay before full program starts.
   cout << endl;
@@ -76,7 +75,7 @@ int main()
   }
   usleep(1000000);
 
-  cout << "\n\nThank you, you will now be given a list of countries\n"
+  cout << "\nThank you, you will now be given a list of countries\n"
     "you may go to with our program.\n\n";
   usleep(1000000);
 
@@ -87,38 +86,40 @@ int main()
     case 1:
       cout << "As your most fluent language is Afrikaans, "
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
-        // Australila, Argentina, Belgium, Botswana, Lesotho, Malawi, New Zealand, South Africa, US, Zimbabwe
+      usleep(500000);
+        // Australia, Argentina, Belgium, Botswana, Lesotho, Malawi, New Zealand, South Africa, US, Zimbabwe
       switch (spec)
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "Botswana \nLesotho \nSouth Africa \nZimbabwe";
+          cout << "1. Botswana \n2. Lesotho \n3. South Africa \n4. Zimbabwe";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Australia \nBelgium \nUnited States";
+          cout << "1. Australia \n2. Belgium \n3. Lesotho \n4. New Zealand \n5. United States";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "Lesotho, Malawi, South Africa, Zimbabwe";
+          cout << "1. Lesotho \n2. Malawi \n3. South Africa \n4. Zimbabwe";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Argentina \nMalawi \nNew Zealand";
+          cout << "1. Argentina \n2. Botswana \n3. Malawi \n4. New Zealand";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Australia \nBelgium \nUnited States";
+          cout << "1. Australia \n2. Belgium \n3. South Africa \n4. United States";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Botswana \nMalawi \nSouth Africa";
+          cout << "1. Botswana \n2. Malawi \n3. South Africa \n4. Zimbabwe";
           break;
       }
       break;
     case 2:
       cout << "As your most fluent language is Arabic, "
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      usleep(500000);
      /*
       Afghanistan, Argentina, Canada, Chad, Egypt, France, Italy, Iraq, Jordan, Lebanon, Libya, Palestine, Pakistan, Philippines, Sudan, Syria, US, Yemen
      */
@@ -126,33 +127,34 @@ int main()
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "Afghanistan \nEgypt \nIraq \nSyria \nSudan \nUnited States";
+          cout << "1. Afghanistan \n2. Egypt \n3. Iraq \n4. Syria \n5. Sudan \n6. United States";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Chad \nEgypt \nIraq \nJordan \nPalestine";
+          cout << "1. Chad \n2. Egypt \n3. Iraq \n4. Jordan \n5. Palestine";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "Afghanistan \nJordan \nLebanon \nPaikstan \n Yemen";
+          cout << "1. Afghanistan \n2. Jordan \n3. Lebanon \n4. Pakistan \n5. Yemen";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Argentina \nCanada \nFrance \nLibya \nSudan \nUnited States";
+          cout << "1. Argentina \n2. Canada \n3. France \n4. Libya \n5. Sudan \n6. United States";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Canada \nFrance \nItaly \nLibya \nPhillipines \nSudan";
+          cout << "1. Canada \n2. France \n3. Italy \n4. Libya \n5. Phillipines \n6. Sudan";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Afghanistan \nChad \nIraq \nJordan \nPalestine \nSudan \n Syria \nYemen";
+          cout << "1. Afghanistan \n2. Chad \n3. Iraq \n4. Jordan \n5. Palestine \n6. Sudan \n7. Syria \n8. Yemen";
           break;
       }
       break;
     case 3:
       cout << "As your most fluent language is English, "
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      usleep(500000);
         /*
         Belgium, Cameroon, Canada, India, Kenya, Liberia, Malawi, Nigeria, Pakistan,
         Paupa New Guinea, Philippines, Rwanda, Sierra Leone, South Africa, South Sudan, Sudan,
@@ -162,37 +164,38 @@ int main()
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "Cameroon \nIndia \nKenya \nSouth Africa \nUnited States \nZimbabwe  ";
+          cout << "1. Cameroon \n2. India \n3. Kenya \n4. South Africa \n5. United States \n6. Zimbabwe ";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Kenya \nLiberia \nNew Zealand \nNigeria \nPaupa New Guinea \nSierra Leone";
+          cout << "1. Kenya \n2. Liberia \n3. New Zealand \n4. Nigeria \n5. Paupa New Guinea \n6. Sierra Leone";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "India \nKenya \nMalawi \nNigeria \nRwanda \nSouth Africa \nSouth Sudan \nSudan "
-            "\nZimbabwe";
+          cout << "1. India \n2. Kenya \n3. Malawi \n4. Nigeria \n5. Rwanda \n6. South Africa \n7. South Sudan"
+            "\n8. Sudan \n9. Zimbabwe";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Belgium \nCanada \nKenya \nNigeria \nPaupa New Guinea \nSierra Leone \nSudan"
-            "\nTanzania";
+          cout << "1. Belgium \n2. Canada \n3. Kenya \n4. Nigeria \n5. Paupa New Guinea \n6. Sierra Leone "
+            "\n7. Sudan \n8. Tanzania";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Belgium \nIndia \nPakistan \nPhilippines \nSierra Leone \nSouth Africa \nSudan "
-            "\nZimbabwe";
+          cout << "1. Belgium \n2. India \n3. Pakistan \n4. Philippines \n5. Sierra Leone \n6. South Africa \n7. Sudan "
+            "\n8. Zimbabwe";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Cameroon \nLiberia \nMalawi \nPakistan \nRwanda \nSouth Africa "
-            "\nTanzania \n Uganda \nZambia";
+          cout << "1. Cameroon \n2. Liberia \n3. Malawi \n4. Pakistan \n5. Rwanda \n6. South Africa "
+            "\n7. Tanzania \n8. Uganda \n9. Zambia";
           break;
       }
       break;
     case 4:
       cout << "As your most fluent language is French, "
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      usleep(500000);
         /*
         Belgium, Cameroon, Canada, Chad, Côte d'Ivoire, Democratic Republic of the Congo, France, 
         Guinea, Haiti, India, Italy, Jordan, Lebanon, Mali, Mexico, Niger, Rwanda, Switzerland, US
@@ -201,139 +204,143 @@ int main()
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "Cameroon \nChad \nD. Republic of the Congo \nHaiti \nJordan \nNiger \nRwanda "
-          "\nUnited States";
+          cout << "1. Cameroon \n2. Chad \n3. D. Republic of the Congo \n4. Haiti \n5. Jordan \n6. Niger"
+            "\n7. Rwanda \n8. United States";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Chad \nCôte d'Ivoire \nFrance \nGuinea \nHaiti \nMali \nMexico \nNiger \nRwanda "
-          "\nSwitzerland";
+          cout << "1. Chad \n2. Côte d'Ivoire \n3. France \n4. Guinea \n5. Haiti \n6. Mali \n7. Mexico "
+            "\n8. Niger \n9. Rwanda \n10. Switzerland";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "Chad \nGuinea \nHaiti \nJordan \nLebanon \nMali \nNiger \nRwanda";
+          cout << "1. Chad \n2. Guinea \n3. Haiti \n4. Jordan \n5. Lebanon \n6. Mali \n7. Niger \n8. Rwanda";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Belgium \nCameroon \nCanada \nGuinea \nHaiti \nNiger \nSwitzerland ";
+          cout << "1. Belgium \n2. Cameroon \n3. Canada \n4. Guinea \n5. Haiti \n6. Niger \n7. Switzerland ";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Belgium \nFrance \nIndia \nItaly \nJordan \nMexico \nSwitzerland";
+          cout << "1. Belgium \n2. France \n3. India \n4. Italy \n5. Jordan \n6. Mexico \n7. Switzerland";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Canada \nD. Republic of the Congo \nHaiti \nLebanon \nMali \nNiger "
-          "\nSwitzerland \nUnited States";
+          cout << "1. Canada \n2. D. Republic of the Congo \n3. Haiti \n4. Lebanon \n5. Mali \n6. Niger "
+            "\n7. Switzerland \n8. United States";
           break;
       }
       break;
     case 5:
       cout << "As your most fluent language is Hindi, "
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      usleep(500000);
         /* 
-          Bangladesh, India, Pakistan, South Africa, Yemen, Australia, New Zealand, Tanzania, Uganda, Canada,
-          US
+          Australia, Bangladesh, Canada, India, New Zealand, Pakistan, South Africa, Tanzania, Uganda, 
+          US, Yemen
         */
       switch (spec)
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Hindi speaking countries here with Dietetics need.";
+          cout << "1. Bangladesh \n2. India \n3. South Africa \n4. Uganda \n5. Yemen";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Hindi speaking countries here with General Surgery need.";
+          cout << "1. India \n2. Pakistan \n3. South Africa \n4. Tanzania \n5. United States \n6 Yemen";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Hindi speaking countries here with Hematology need.";
+          cout << "1. Australia \n2. India \n3. Pakistan \n4. South Africa \n5. Yemen";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Hindi speaking countries here with Neurology need.";
+          cout << "1. Bangladesh \n2. India \n3. New Zealand \n4. South Africa \n5. United States";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Hindi speaking countries here with Orthopedic Surgery need.";
+          cout << "1. Canada \n2. India \n3. Pakistan \n4. Tanzania \n5. Uganda";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Hindi speaking countries here with Pediatrics need.";
+          cout << "1. Bangladesh \n2. India \n3. Pakistan \n4. Tanzania \n5. Yemen";
           break;
       }
       break;
     case 6:
       cout << "As your most fluent language is Italian, "
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      usleep(500000);
       /*
-      Italy, Switzerland, Belgium, France, Greece, Libya, Argentina, Canada, Mexico, US, Australia
+        Argentina, Australia, Belgium, Canada, France, Greece, Italy, Libya, Mexico, Switzerland, US
       */
       switch (spec)
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Italian speaking countries here with Dietetics need.";
+          cout << "1. Belgium \n2. France \n3. Greece \n4. Libya \n5. Mexico \n6. United States";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Italian speaking countries here with General Surgery need.";
+          cout << "1. Argentina \n2. Canada \n3. Italy \n4. Switzerland \n5. United States";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Italian speaking countries here with Hematology need.";
+          cout << "1. Australia \n2. Belgium \n3. Italy \n4. Libya \n5. Mexico ";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Italian speaking countries here with Neurology need.";
+          cout << "1. Australia \n2. Canada \n3. Greece \n4. Libya \n5. Switzerland \n6. United States";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Italian speaking countries here with Orthopedic Surgery need.";
+          cout << "1. Belgium \n2. France \n3. Greece \n4. Italy \n5. Libya \n6. Mexico";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Italian speaking countries here with Pediatrics need.";
+          cout << "1. Argentina \n2. Greece \n3. Italy \n4. Libya \n5. Mexico \n6. United States";
           break;
       }
       break;
     case 7:
       cout << "As your most fluent language is Portuguese, "
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      usleep(500000);
       /*
-      Portugal, France, Switzerland, South Africa, India, US, Canada, 
+        Canada, France, India, Mexico, Portugal, South Africa, Switzerland, US  
       */
       switch (spec)
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Portuguese speaking countries here with Dietetics need.";
+          cout << "1. France \n2. India \n3. Portugal \n4. South Africa \n5. United States";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Portuguese speaking countries here with General Surgery need.";
+          cout << "1. India \n2. Mexico \n3. Portugal \n4. South Africa \n5. United States";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Portuguese speaking countries here with Hematology need.";
+          cout << "1. Canada \n2. India \n3. Mexico \n4. Portugal \n5. Switzerland";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Portuguese speaking countries here with Neurology need.";
+          cout << "1. France \n2. India \n3. Mexico \n4. Portugal \n5. South Africa";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Portuguese speaking countries here with Orthopedic Surgery need.";
+          cout << "1. India \n2. Mexico \n3. Portugal \n4. South Africa \n5. United States";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Insert Portuguese speaking countries here with Pediatrics need.";
+          cout << "1. Canada \n2. India \n3. Portugal \n4. South Africa \n5. United States";
           break;
       }
       break;
     case 8:
       cout << "As your most fluent language is Spanish,"
         "you will be assigned to a \ncountry with that language in mind." << endl << endl;
+      usleep(500000);
       /*
       France, Italy, New Zealand, Philippines, Mexico, US, El Salvador, Argentina
       Cuba, Spain, Nicaragua
@@ -342,32 +349,33 @@ int main()
       {
         case 1: // Dietetics
           cout << "Your options are as follows: " << endl;
-          cout << "El Salvador \nFrance \nPhilippines";
+          cout << "1. El Salvador \n2. France \n3. Mexico \n4. Philippines";
           break;
         case 2: // General Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Argentina \nMexico \nSpain";
+          cout << "1. Argentina \n2. Mexico \n3. Spain";
           break;
         case 3: // Hematology
           cout << "Your options are as follows: " << endl;
-          cout << "Cuba \nEl Salvador \nNicaragua \nSpain";
+          cout << "1. Cuba \n2. El Salvador \n3. Nicaragua \n4. Spain";
           break;
         case 4: // Neurology
           cout << "Your options are as follows: " << endl;
-          cout << "Argentina \nNew Zealand \nPhilippines \nUnited States ";
+          cout << "1. Argentina \n2. New Zealand \n3. Philippines \n4. United States ";
           break;
         case 5: // Orthopedic Surgery
           cout << "Your options are as follows: " << endl;
-          cout << "Argentina \nEl Salvador \nFrance \nItaly ";
+          cout << "1. Argentina \n2. El Salvador \n3. France \n4. Italy \n5. Mexico";
           break;
         case 6: // Pediatrics
           cout << "Your options are as follows: " << endl;
-          cout << "Argentina \nChile \nCuba \nNicaragua \nVenezuela ";
+          cout << "1. Argentina \n2. Chile \n3. Cuba \n4. Nicaragua \n5. Spain \n6. Venezuela ";
           break;
       }
       break;
   }
-  cout << "Thank you for participating in the Doctors without Borders Program." << endl;
+  usleep(500000);
+  cout << endl << endl << "Thank you for participating in the Doctors without Borders Program." << endl;
 }
 // sorting the language array
 void sortLan(string language[], int lan)
